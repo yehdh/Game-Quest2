@@ -302,11 +302,11 @@ namespace ConsoleApp1
                     if (y == true)
                     {
                         Console.WriteLine("Вам удается откупиться от них купленным пивом");
-                        foreach (Item j in seva.items)
+                        for (int j = 0; j < seva.items.Count; j++)
                         {
-                            if (j.name == "bear")
+                            if (seva.items[j].name == "bear")
                             {
-                                seva.items.Remove(j);
+                                seva.items.Remove(seva.items[j]);
                             }
                         }
                         seva.time -= 5;
